@@ -86,3 +86,7 @@ func _on_main_menu_visibility_changed():
 
 func _on_global_high_score():
 	$Leaderboards/HBoxContainer/GlobalLeaderboard.highlight_global_score(initials, score)
+
+func _on_retry_button_pressed() -> void:
+	$HighScoreEntry.hide()
+	_on_start_button_pressed()

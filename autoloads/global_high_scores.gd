@@ -36,4 +36,3 @@ func _on_request_completed(_result, response_code, _headers, body):
 		leaderboard_fetched.emit()
 	if json && json.has("scoreUpdated") && json["scoreUpdated"] == true:
 		global_high_score.emit()
-
