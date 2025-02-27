@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://x3oe10u0lnm6"]
+[gd_scene load_steps=5 format=3 uid="uid://x3oe10u0lnm6"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_08byj"]
+[ext_resource type="PackedScene" uid="uid://b1b8bb874muhu" path="res://touch_controls.tscn" id="2_775oc"]
 [ext_resource type="PackedScene" uid="uid://bu4hub4oo1x7a" path="res://leaderboard.tscn" id="2_wo5dk"]
 [ext_resource type="Script" path="res://name_entry.gd" id="5_a5jol"]
 
@@ -84,6 +85,19 @@ text = "Start"
 
 [node name="MessageTimer" type="Timer" parent="GameScreen"]
 wait_time = 4.0
+
+[node name="TouchControlLayer" parent="GameScreen" instance=ExtResource("2_775oc")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -232.0
+offset_right = -128.0
+offset_bottom = -232.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="HighScoreEntry" type="VBoxContainer" parent="."]
 visible = false
